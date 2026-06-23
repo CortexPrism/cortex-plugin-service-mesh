@@ -1,7 +1,7 @@
 {
   "name": "cortex-plugin-service-mesh",
-  "version": "1.0.0",
-  "description": "Service Mesh Config Validator — Istio/Linkerd/Consul validation for mTLS, traffic policies, circuit breaking, observability",
+  "version": "1.0.1",
+  "description": "Service Mesh Config Validator \u2014 Istio/Linkerd/Consul validation for mTLS, traffic policies, circuit breaking, observability",
   "kind": "esm",
   "entryPoint": "mod.ts",
   "runtime": "deno",
@@ -9,18 +9,40 @@
   "license": "MIT",
   "repository": "https://github.com/CortexPrism/cortex-plugin-service-mesh",
   "homepage": "https://cortexprism.io/marketplace/plugins/service-mesh",
-  "capabilities": ["tools", "network:fetch"],
+  "capabilities": [
+    "tools",
+    "network:fetch"
+  ],
   "tools": [
-    { "name": "mesh_validate", "description": "Validate service mesh configuration", "params": [] },
-    { "name": "mesh_check_mtls", "description": "Verify mTLS settings", "params": [] },
+    {
+      "name": "mesh_validate",
+      "description": "Validate service mesh configuration",
+      "params": []
+    },
+    {
+      "name": "mesh_check_mtls",
+      "description": "Verify mTLS settings",
+      "params": []
+    },
     {
       "name": "mesh_review_policies",
       "description": "Review traffic and rate limiting policies",
       "params": []
     },
-    { "name": "mesh_suggest_fixes", "description": "Suggest configuration fixes", "params": [] }
+    {
+      "name": "mesh_suggest_fixes",
+      "description": "Suggest configuration fixes",
+      "params": []
+    }
   ],
   "dependencies": {},
-  "peerDependencies": { "cortex": ">=1.0.0" },
-  "aiDisclosure": { "tools": ["Kilo (DeepSeek) — batch scaffold"], "humanReview": true }
+  "peerDependencies": {
+    "cortex": ">=0.51.0"
+  },
+  "aiDisclosure": {
+    "tools": [
+      "Kilo (DeepSeek) \u2014 batch scaffold"
+    ],
+    "humanReview": true
+  }
 }
